@@ -1,0 +1,39 @@
+{
+  "name": "dos622_486_sb16",
+  "machine": "ms4144",
+  "cpu": {
+    "model": "i486dx",
+    "speed_hz": 25000000,
+    "multi": "1",
+    "fpu": "internal",
+    "dynarec": true
+  },
+  "memory_kib": 6144,
+  "video": {
+    "model": "cl_gd5420_isa"
+  },
+  "sound": {
+    "model": "sb16"
+  },
+  "interfaces": [],
+  "disks": [
+    {
+      "device": "floppy",
+      "target": "fda",
+      "source": "/testsrc/images/dos622_simple.img",
+      "type": "35_2hd",
+      "options": {
+        "turbo": "1"
+      }
+    },
+    {
+      "device": "floppy",
+      "target": "fdb",
+      "source": null,
+      "type": "35_2hd",
+      "options": {
+        "turbo": "1"
+      }
+    }
+  ]
+}

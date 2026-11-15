@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rmm-86box"
+version = "0.1.0"
+description = "Client for 86Box's remote machine monitor (RMM): JSON-RPC, screen capture, snapshots, VM config in KVM terms"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []          # stdlib only; the Qt demo is separate (rmm_demo/)
+
+[project.scripts]
+rmm-86box = "rmm_86box.__main__:main"
+rmmctl = "rmm_86box.ctl:main"
+
+[tool.setuptools]
+packages = ["rmm_86box", "rmm_86box._vendor", "rmm_86box.backends", "rmm_86box.backends.qemu"]
+
+[tool.setuptools.package-data]
+"rmm_86box._vendor" = ["*.py"]

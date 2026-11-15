@@ -1,0 +1,243 @@
+{
+ "generator": "ExportRmmSymbols.py",
+ "program": {
+  "name": "game16.exe",
+  "executable_format": "Old-style DOS Executable (MZ)",
+  "executable_path": "/x/game16.exe",
+  "md5": "",
+  "language": "x86:LE:16:Real Mode:default",
+  "image_base": "1000:0000"
+ },
+ "memory": [
+  {
+   "name": "CODE_0",
+   "start": "1000:0000",
+   "end": "1000:045c",
+   "r": true,
+   "w": true,
+   "x": true,
+   "initialized": true
+  }
+ ],
+ "functions": [
+  {
+   "name": "hurt_",
+   "entry": "1000:0008",
+   "size": 17,
+   "signature": "",
+   "thunk": false,
+   "bytes": "50 B8 02 00 E8 2A 00 58 29 06 26 00 FF 06 64 00"
+  },
+  {
+   "name": "main_",
+   "entry": "1000:0019",
+   "size": 32,
+   "signature": "",
+   "thunk": false,
+   "bytes": "B8 04 00 E8 1A 00 52 31 D2 B8 01 00 E8 E0 FF 42"
+  },
+  {
+   "name": "__STK",
+   "entry": "1000:0039",
+   "size": 23,
+   "signature": "",
+   "thunk": false,
+   "bytes": "3B C4 73 13 2B C4 F7 D8 3B 06 34 00 77 06 8C D0"
+  },
+  {
+   "name": "__STKOVERFLOW_",
+   "entry": "1000:0050",
+   "size": 28,
+   "signature": "",
+   "thunk": false,
+   "bytes": "0E 5A B8 5B 00 BB 01 00 E9 AC 02 53 74 61 63 6B"
+  },
+  {
+   "name": "___begtext",
+   "entry": "1000:0003",
+   "size": 5,
+   "signature": "",
+   "thunk": false,
+   "bytes": "90 90 90 90 00 50 B8 02 00 E8 2A 00 58 29 06 26"
+  },
+  {
+   "name": "_cstart_",
+   "entry": "1000:006C",
+   "size": 426,
+   "signature": "",
+   "thunk": false,
+   "bytes": "EB 37 03 00 2A 2A 2A 20 4E 55 4C 4C 20 61 73 73"
+  },
+  {
+   "name": "__exit_",
+   "entry": "1000:0216",
+   "size": 29,
+   "signature": "",
+   "thunk": false,
+   "bytes": "50 BA ?? ?? 8E DA FC 8D 3E 00 00 8E C2 B9 10 00"
+  },
+  {
+   "name": "__do_exit_with_msg_",
+   "entry": "1000:0233",
+   "size": 198,
+   "signature": "",
+   "thunk": false,
+   "bytes": "BC EA 00 53 50 52 8C CF 8E DF BA 9F 00 B8 01 3D"
+  },
+  {
+   "name": "__GETDS",
+   "entry": "1000:02F9",
+   "size": 11,
+   "signature": "",
+   "thunk": false,
+   "bytes": "50 B8 ?? ?? 8E D8 58 C3 CB CB 00 E9 2C FF 89 C1"
+  },
+  {
+   "name": "_small_code_",
+   "entry": "1000:0304",
+   "size": 3,
+   "signature": "",
+   "thunk": false,
+   "bytes": "E9 2C FF 89 C1 89 D6 E8 07 01 85 C0 75 07 89 C8"
+  },
+  {
+   "name": "CodeModelMismatch",
+   "entry": "1000:0304",
+   "size": 3,
+   "signature": "",
+   "thunk": false,
+   "bytes": "E9 2C FF 89 C1 89 D6 E8 07 01 85 C0 75 07 89 C8"
+  },
+  {
+   "name": "__exit_with_msg_",
+   "entry": "1000:0304",
+   "size": 3,
+   "signature": "",
+   "thunk": false,
+   "bytes": "E9 2C FF 89 C1 89 D6 E8 07 01 85 C0 75 07 89 C8"
+  },
+  {
+   "name": "__fatal_runtime_error_",
+   "entry": "1000:0307",
+   "size": 23,
+   "signature": "",
+   "thunk": false,
+   "bytes": "89 C1 89 D6 E8 07 01 85 C0 75 07 89 C8 89 F2 E9"
+  },
+  {
+   "name": "__CMain",
+   "entry": "1000:031E",
+   "size": 64,
+   "signature": "",
+   "thunk": false,
+   "bytes": "52 8B 16 68 00 A1 66 00 E8 F0 FC E9 06 01 53 52"
+  },
+  {
+   "name": "__InitRtns",
+   "entry": "1000:035E",
+   "size": 87,
+   "signature": "",
+   "thunk": false,
+   "bytes": "53 51 52 56 57 55 89 E5 89 C1 1E E8 8D FF BF 64"
+  },
+  {
+   "name": "__FiniRtns",
+   "entry": "1000:03B5",
+   "size": 95,
+   "signature": "",
+   "thunk": false,
+   "bytes": "53 51 56 57 55 89 E5 89 C1 1E E8 37 FF 88 D5 BF"
+  },
+  {
+   "name": "__DOSseg__",
+   "entry": "1000:0414",
+   "size": 1,
+   "signature": "",
+   "thunk": false,
+   "bytes": "C3 80 3E 58 00 00 75 03 31 C0 C3 52 50 CC EB 06"
+  },
+  {
+   "name": "__EnterWVIDEO_",
+   "entry": "1000:0415",
+   "size": 28,
+   "signature": "",
+   "thunk": false,
+   "bytes": "80 3E 58 00 00 75 03 31 C0 C3 52 50 CC EB 06 57"
+  },
+  {
+   "name": "__null_int23_exit_",
+   "entry": "1000:0431",
+   "size": 1,
+   "signature": "",
+   "thunk": false,
+   "bytes": "C3 89 C3 FF 16 5A 00 BA FF 00 B8 10 00 E8 74 FF"
+  },
+  {
+   "name": "exit_",
+   "entry": "1000:0432",
+   "size": 28,
+   "signature": "",
+   "thunk": false,
+   "bytes": "89 C3 FF 16 5A 00 BA FF 00 B8 10 00 E8 74 FF FF"
+  },
+  {
+   "name": "_exit_",
+   "entry": "1000:044E",
+   "size": 16,
+   "signature": "",
+   "thunk": false,
+   "bytes": "89 C2 FF 16 5A 00 FF 16 5C 00 89 D0 E9 B9 FD 00"
+  }
+ ],
+ "labels": [
+  {
+   "name": "stack_top",
+   "address": "104d:0800"
+  }
+ ],
+ "data": [
+  {
+   "name": "hero",
+   "address": "1046:0022",
+   "size": 8,
+   "datatype": "player"
+  },
+  {
+   "name": "score",
+   "address": "1046:0064",
+   "size": 2,
+   "datatype": "int"
+  }
+ ],
+ "types": {
+  "player": {
+   "size": 8,
+   "fields": [
+    {
+     "name": "x",
+     "offset": 0,
+     "size": 2,
+     "type": "int"
+    },
+    {
+     "name": "y",
+     "offset": 2,
+     "size": 2,
+     "type": "int"
+    },
+    {
+     "name": "health",
+     "offset": 4,
+     "size": 2,
+     "type": "int"
+    },
+    {
+     "name": "ammo",
+     "offset": 6,
+     "size": 2,
+     "type": "int"
+    }
+   ]
+  }
+ }
+}

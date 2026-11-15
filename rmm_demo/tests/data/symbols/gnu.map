@@ -1,0 +1,530 @@
+
+Merging program properties
+
+
+As-needed library included to satisfy reference by file (symbol)
+
+libc.so.6                     /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o (__libc_start_main@@GLIBC_2.34)
+
+Discarded input sections
+
+ .note.gnu.property
+                0x0000000000000000       0x20 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+ .note.gnu.property
+                0x0000000000000000       0x20 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+ .note.gnu.property
+                0x0000000000000000       0x20 /tmp/cc1eUXVt.o
+ .note.gnu.property
+                0x0000000000000000       0x20 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+ .note.gnu.property
+                0x0000000000000000       0x20 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+LOAD /tmp/cc1eUXVt.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so
+START GROUP
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgcc_s.so.1
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a
+END GROUP
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libc.so
+START GROUP
+LOAD /lib/x86_64-linux-gnu/libc.so.6
+LOAD /usr/lib/x86_64-linux-gnu/libc_nonshared.a
+LOAD /lib64/ld-linux-x86-64.so.2
+END GROUP
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so
+START GROUP
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libgcc_s.so.1
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a
+END GROUP
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+LOAD /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+                [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x400000))
+                0x0000000000400350                . = (SEGMENT_START ("text-segment", 0x400000) + SIZEOF_HEADERS)
+
+.note.gnu.property
+                0x0000000000400350       0x30
+ .note.gnu.property
+                0x0000000000400350       0x30 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.note.gnu.build-id
+                0x0000000000400380       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000000400380       0x24 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.interp         0x00000000004003a4       0x1c
+ *(.interp)
+ .interp        0x00000000004003a4       0x1c /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.hash
+ *(.hash)
+
+.gnu.hash       0x00000000004003c0       0x1c
+ *(.gnu.hash)
+ .gnu.hash      0x00000000004003c0       0x1c /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.dynsym         0x00000000004003e0       0x48
+ *(.dynsym)
+ .dynsym        0x00000000004003e0       0x48 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.dynstr         0x0000000000400428       0x37
+ *(.dynstr)
+ .dynstr        0x0000000000400428       0x37 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.gnu.version    0x0000000000400460        0x6
+ *(.gnu.version)
+ .gnu.version   0x0000000000400460        0x6 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.gnu.version_d  0x0000000000400468        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000400468        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.gnu.version_r  0x0000000000400468       0x20
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000400468       0x20 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.rela.dyn       0x0000000000400488       0x30
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ .rela.text     0x0000000000400488        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ .rela.data.rel.ro
+                0x0000000000400488        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ .rela.got      0x0000000000400488       0x30 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ .rela.bss      0x00000000004004b8        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.rela.ldata .rela.ldata.* .rela.gnu.linkonce.l.*)
+ *(.rela.lbss .rela.lbss.* .rela.gnu.linkonce.lb.*)
+ *(.rela.lrodata .rela.lrodata.* .rela.gnu.linkonce.lr.*)
+ *(.rela.ifunc)
+
+.rela.plt       0x00000000004004b8        0x0
+ *(.rela.plt)
+ .rela.plt      0x00000000004004b8        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                [!provide]                        PROVIDE (__rela_iplt_start = .)
+ *(.rela.iplt)
+ .rela.iplt     0x00000000004004b8        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                [!provide]                        PROVIDE (__rela_iplt_end = .)
+
+.relr.dyn
+ *(.relr.dyn)
+                0x0000000000401000                . = ALIGN (CONSTANT (MAXPAGESIZE))
+
+.init           0x0000000000401000       0x1b
+ *(SORT_NONE(.init))
+ .init          0x0000000000401000       0x16 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+                0x0000000000401000                _init
+ .init          0x0000000000401016        0x5 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+
+.plt            0x0000000000401020        0x0
+ *(.plt)
+ .plt           0x0000000000401020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.iplt)
+ .iplt          0x0000000000401020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.plt.got        0x0000000000401020        0x0
+ *(.plt.got)
+ .plt.got       0x0000000000401020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.plt.sec        0x0000000000401020        0x0
+ *(.plt.sec)
+ .plt.sec       0x0000000000401020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.text           0x0000000000401020      0x12c
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000401020       0x35 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000401020                _start
+                0x0000000000401050                _dl_relocate_static_pie
+ .text          0x0000000000401055        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+ *fill*         0x0000000000401055        0xb 
+ .text          0x0000000000401060       0xa6 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+ .text          0x0000000000401106       0x46 /tmp/cc1eUXVt.o
+                0x0000000000401106                hurt
+                0x0000000000401132                main
+ .text          0x000000000040114c        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+ .text          0x000000000040114c        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+ *(.gnu.warning)
+
+.fini           0x000000000040114c        0xd
+ *(SORT_NONE(.fini))
+ .fini          0x000000000040114c        0x8 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+                0x000000000040114c                _fini
+ .fini          0x0000000000401154        0x5 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+                0x0000000000402000                . = ALIGN (CONSTANT (MAXPAGESIZE))
+                0x0000000000402000                . = SEGMENT_START ("rodata-segment", (ALIGN (CONSTANT (MAXPAGESIZE)) + (. & (CONSTANT (MAXPAGESIZE) - 0x1))))
+
+.rodata         0x0000000000402000        0x4
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cst4   0x0000000000402000        0x4 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000402000                _IO_stdin_used
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x0000000000402004       0x2c
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000000402004       0x2c /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000402004                __GNU_EH_FRAME_HDR
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame       0x0000000000402030       0x84
+ *(.eh_frame)
+ .eh_frame      0x0000000000402030       0x40 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                                         0x5c (size before relaxing)
+ .eh_frame      0x0000000000402070        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ .eh_frame      0x0000000000402070        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ .eh_frame      0x0000000000402070        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *fill*         0x0000000000402070        0x0 
+ .eh_frame      0x0000000000402070       0x40 /tmp/cc1eUXVt.o
+                                         0x58 (size before relaxing)
+ .eh_frame      0x00000000004020b0        0x4 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+ *(.eh_frame.*)
+
+.sframe         0x00000000004020b4        0x0
+ *(.sframe)
+ .sframe        0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ .sframe        0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ .sframe        0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.sframe.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.note.build-id
+ *(.note.build-id)
+
+.note.GNU-stack
+                0x00000000004020b4        0x0
+ *(.note.GNU-stack)
+ .note.GNU-stack
+                0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ .note.GNU-stack
+                0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+ .note.GNU-stack
+                0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+ .note.GNU-stack
+                0x00000000004020b4        0x0 /tmp/cc1eUXVt.o
+ .note.GNU-stack
+                0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+ .note.GNU-stack
+                0x00000000004020b4        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+
+.note.gnu-property
+ *(.note.gnu-property)
+
+.note.ABI-tag   0x00000000004020b4       0x20
+ *(.note.ABI-tag)
+ .note.ABI-tag  0x00000000004020b4       0x20 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.note.package   0x00000000004020d4       0x70
+ *(.note.package)
+ .note.package  0x00000000004020d4       0x70 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.note.dlopen
+ *(.note.dlopen)
+
+.note.netbsd.ident
+ *(.note.netbsd.ident)
+
+.note.openbsd.ident
+ *(.note.openbsd.ident)
+                0x0000000000403e38                . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.sframe
+ *(.sframe)
+ *(.sframe.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.tdata          0x0000000000403e38        0x0
+                [!provide]                        PROVIDE (__tdata_start = .)
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000000403e38        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000000000403e38        0x8
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x0000000000403e38        0x8 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000000000403e40        0x8
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x0000000000403e40        0x8 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro    0x0000000000403e48        0x0
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+ .data.rel.ro   0x0000000000403e48        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.dynamic        0x0000000000403e48      0x190
+ *(.dynamic)
+ .dynamic       0x0000000000403e48      0x190 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000403e48                _DYNAMIC
+
+.got            0x0000000000403fd8       0x10
+ *(.got)
+ .got           0x0000000000403fd8       0x10 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.igot)
+                0x0000000000403fe8                . = DATA_SEGMENT_RELRO_END (., (SIZEOF (.got.plt) >= 0x18)?0x18:0x0)
+
+.got.plt        0x0000000000403fe8       0x18
+ *(.got.plt)
+ .got.plt       0x0000000000403fe8       0x18 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000403fe8                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x0000000000404000        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+
+.data           0x0000000000404000       0x20
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000404000        0x4 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+                0x0000000000404000                data_start
+                0x0000000000404000                __data_start
+ .data          0x0000000000404004        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+ *fill*         0x0000000000404004        0x4 
+ .data          0x0000000000404008        0x8 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+                0x0000000000404008                __dso_handle
+ .data          0x0000000000404010       0x10 /tmp/cc1eUXVt.o
+                0x0000000000404010                hero
+ .data          0x0000000000404020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+ .data          0x0000000000404020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+
+.tm_clone_table
+                0x0000000000404020        0x0
+ .tm_clone_table
+                0x0000000000404020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+ .tm_clone_table
+                0x0000000000404020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+
+.data1
+ *(.data1)
+                0x0000000000404020                _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x0000000000404020                . = ALIGN (ALIGNOF (NEXT_SECTION))
+                0x0000000000404020                __bss_start = .
+
+.bss            0x0000000000404020        0x8
+ *(.dynbss)
+ .dynbss        0x0000000000404020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000404020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crt1.o
+ .bss           0x0000000000404020        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o
+ .bss           0x0000000000404020        0x1 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+ *fill*         0x0000000000404021        0x3 
+ .bss           0x0000000000404024        0x4 /tmp/cc1eUXVt.o
+                0x0000000000404024                score
+ .bss           0x0000000000404028        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+ .bss           0x0000000000404028        0x0 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+ *(COMMON)
+                0x0000000000404028                . = ALIGN ((. != 0x0)?0x8:0x1)
+
+.lbss
+ *(.dynlbss)
+ *(.lbss .lbss.* .gnu.linkonce.lb.*)
+ *(LARGE_COMMON)
+                0x0000000000404028                . = ALIGN (0x8)
+                0x0000000000404028                . = SEGMENT_START ("ldata-segment", .)
+
+.lrodata
+ *(.lrodata .lrodata.* .gnu.linkonce.lr.*)
+
+.ldata          0x0000000000406028        0x0
+ *(.ldata .ldata.* .gnu.linkonce.l.*)
+                0x0000000000406028                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x0000000000406028                . = ALIGN (0x8)
+                0x0000000000404028                _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x0000000000406028                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x26
+ *(.comment)
+ .comment       0x0000000000000000       0x26 /usr/lib/gcc/x86_64-linux-gnu/14/crtbegin.o
+                                         0x27 (size before relaxing)
+ .comment       0x0000000000000026       0x27 /tmp/cc1eUXVt.o
+ .comment       0x0000000000000026       0x27 /usr/lib/gcc/x86_64-linux-gnu/14/crtend.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes .gnu.build.attributes.*)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_addr
+ *(.debug_addr)
+
+.debug_line_str
+ *(.debug_line_str)
+
+.debug_loclists
+ *(.debug_loclists)
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_names
+ *(.debug_names)
+
+.debug_rnglists
+ *(.debug_rnglists)
+
+.debug_str_offsets
+ *(.debug_str_offsets)
+
+.debug_sup
+ *(.debug_sup)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+ *(.gnu_object_only)
+OUTPUT(gnu elf64-x86-64)

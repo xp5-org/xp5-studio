@@ -1,0 +1,137 @@
+Open Watcom Linker Version 2.0 beta Sep  1 2026 05:40:46 (64-bit)** EXPERIMENTAL (HLL) ** 
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       26/11/14 01:36:01
+Executable Image: game16.exe
+creating a DOS executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0046:0000            00000870
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0000:0000       00000007
+_TEXT                  CODE           AUTO           0000:0008       00000455
+FAR_DATA               FAR_DATA       AUTO           0045:000d       00000000
+_NULL                  BEGDATA        DGROUP         0046:0000       00000020
+_AFTERNULL             BEGDATA        DGROUP         0048:0000       00000002
+CONST                  DATA           DGROUP         0048:0002       00000000
+CONST2                 DATA           DGROUP         0048:0002       00000000
+_DATA                  DATA           DGROUP         0048:0002       0000003c
+XIB                    DATA           DGROUP         004b:000e       00000000
+XI                     DATA           DGROUP         004b:000e       00000006
+XIE                    DATA           DGROUP         004c:0004       00000000
+YIB                    DATA           DGROUP         004c:0004       00000000
+YI                     DATA           DGROUP         004c:0004       00000000
+YIE                    DATA           DGROUP         004c:0004       00000000
+DATA                   DATA           DGROUP         004c:0004       00000000
+_BSS                   BSS            DGROUP         004c:0004       00000006
+STACK                  STACK          DGROUP         004d:0000       00000800
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: game.o(game.o)
+0000:0008+     hurt_
+0000:0019      main_
+0046:0022+     _hero
+0046:0064+     _score
+Module: /opt/watcom/lib286/dos/clibs.lib(stk)
+0000:0039      __STK
+0000:0050*     __STKOVERFLOW_
+Module: /opt/watcom/lib286/dos/clibs.lib(cstart)
+0000:0003*     ___begtext
+0046:0000*     __nullarea
+0000:006c      _cstart_
+0000:0216      __exit_
+0000:0233      __do_exit_with_msg_
+0000:02f9      __GETDS
+Module: /opt/watcom/lib286/dos/clibs.lib(cmodel)
+0000:0304      _small_code_
+0000:0304*     CodeModelMismatch
+Module: /opt/watcom/lib286/dos/clibs.lib(xmsg.c)
+0000:0304*     __exit_with_msg_
+0000:0307      __fatal_runtime_error_
+Module: /opt/watcom/lib286/dos/clibs.lib(crwdata)
+0046:002c      __curbrk
+0046:0034      __STACKLOW
+0046:0036      __STACKTOP
+0046:0038      __cbyte
+0046:003a      __child
+0046:003c      __no87
+0046:0049      ___FPE_handler
+0046:002e      __psp
+0046:003d      __get_ovl_stack
+0046:0041      __restore_ovl_stack
+0046:0045      __close_ovl_file
+0046:004d      __LpCmdLine
+0046:0051      __LpPgmName
+0046:0030      __osmajor
+0046:0031      __osminor
+0046:0032      __osmode
+0046:0033      __HShift
+Module: /opt/watcom/lib286/dos/clibs.lib(cmain086.c)
+0000:031e      __CMain
+Module: /opt/watcom/lib286/dos/clibs.lib(initrtns.c)
+0000:035e      __InitRtns
+0000:03b5      __FiniRtns
+Module: /opt/watcom/lib286/dos/clibs.lib(uselfn.c)
+0046:0056      ___uselfn
+Module: /opt/watcom/lib286/dos/clibs.lib(dosseg)
+0000:0414      __DOSseg__
+Module: /opt/watcom/lib286/dos/clibs.lib(enterdb.c)
+0000:0415      __EnterWVIDEO_
+0046:0058+     __WD_Present
+Module: /opt/watcom/lib286/dos/clibs.lib(___argc.c)
+0046:0066      ____Argc
+0046:0068      ____Argv
+Module: /opt/watcom/lib286/dos/clibs.lib(exit.c)
+0000:0431+     __null_int23_exit_
+0000:0432      exit_
+0000:044e*     _exit_
+0046:005a+     ___int23_exit
+0046:005c+     ___FPE_handler_exit
+Module: /opt/watcom/lib286/dos/clibs.lib(sgdef086)
+0046:005e      __Start_XI
+0046:0064      __End_XI
+0046:0064      __Start_YI
+0046:0064      __End_YI
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/opt/watcom/lib286/dos/clibs.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  0800 (2048.)
+Memory size:  0cd0 (3280.)
+Entry point address: 0000:006c
+Link time: 00:00.59

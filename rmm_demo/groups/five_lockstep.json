@@ -1,0 +1,24 @@
+{
+  "schema": "rmm-group/1",
+  "name": "five_lockstep",
+  "description": "Five VMs snapped and rolled back as one group: two 86Box DOS nodes the GUI launches itself (ms4144_486, MEMLOOP) and three QEMU guests it attaches to by QMP port (Win 3.1 / i386, Solaris 9 / SPARC SS-5, Mac Q800 / m68k). The QEMUs are started by the testlist (rmm-demo-lockstep5) with monitor ports 55611-55613, so QMP is on 56611-56613. Group snap / restore use savevm / loadvm on the QEMU nodes, so each guest's writable disks must be qcow2.",
+  "vars": {"vmroot": "/tmp/rmm_groups/{group}"},
+  "vm_config_dir": "/testsrc/sourcedir/86box_remote_monitor",
+  "policy": {"halt_all": false},
+  "defaults": {"poll": {"rate": 10}},
+  "templates": {
+    "dos486": {
+      "vm_config": "ms4144_486",
+      "port": "auto",
+      "launch": {"vm_dir": "{vmroot}/{node}", "roms": "/opt/86box/roms", "wait": 20}
+    },
+    "qemu": {"backend": "qemu", "host": "127.0.0.1", "rpc_timeout": 20}
+  },
+  "nodes": {
+    "a": {"extends": "dos486", "title": "DOS 6.22 a"},
+    "b": {"extends": "dos486", "title": "DOS 6.22 b", "box_cfg": {"Machine": {"mem_size": "16384"}}},
+    "w31": {"extends": "qemu", "port": 56611, "title": "Windows 3.1 (QEMU i386)"},
+    "sol": {"extends": "qemu", "port": 56612, "title": "Solaris 9 (QEMU SS-5)"},
+    "m68k": {"extends": "qemu", "port": 56613, "title": "Mac OS 7.6 (QEMU Q800)"}
+  }
+}

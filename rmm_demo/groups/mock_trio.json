@@ -1,0 +1,13 @@
+{
+  "schema": "rmm-group/1",
+  "name": "mock_trio",
+  "description": "Three in-process reference mocks: try halt-all with no VM. `@b debug.break.set addr=0x810F` then watch a and c pause.",
+  "policy": {"halt_all": true, "halt_on": ["breakpoint", "watchpoint", "crash", "disconnect"]},
+  "defaults": {"poll": {"rate": 5, "step": 2}},
+  "nodes": {
+    "a": {"mock": true},
+    "b": {"mock": true},
+    "c": {"mock": true}
+  },
+  "run": ["@* machine.status"]
+}

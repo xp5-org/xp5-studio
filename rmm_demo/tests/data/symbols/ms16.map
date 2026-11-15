@@ -1,0 +1,23 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 0016FH 00170H _TEXT                  CODE
+ 00170H 0024FH 000E0H _DATA                  DATA
+
+ Origin   Group
+ 0017:0   DGROUP
+
+  Address         Publics by Name
+
+ 0017:0042       _hero
+ 0000:0010       _hurt
+ 0000:0034       _main
+ 0000:0000  Abs  __acrtused
+
+  Address         Publics by Value
+
+ 0000:0000  Abs  __acrtused
+ 0000:0010       _hurt
+ 0000:0034       _main
+ 0017:0042       _hero
+
+Program entry point at 0000:0050

@@ -1,0 +1,21 @@
+{
+  "schema": "rmm-group/1",
+  "name": "pair_launch",
+  "description": "Two 86Box instances the GUI starts itself from the ms4144_486 VM config (box_cfg, NVR seed and the A build's binary), each in its own VM dir with its own free monitor port. b differs only in RAM. Closing the GUI quits both (machine.quit, so nvr/ is written).",
+  "vars": {"vmroot": "/tmp/rmm_groups/{group}"},
+  "vm_config_dir": "/testsrc/sourcedir/86box_remote_monitor",
+  "policy": {"halt_all": true, "halt_on": ["breakpoint", "watchpoint", "crash"]},
+  "defaults": {"poll": {"rate": 10}},
+  "templates": {
+    "dos486": {
+      "vm_config": "ms4144_486",
+      "port": "auto",
+      "launch": {"vm_dir": "{vmroot}/{node}", "roms": "/opt/86box/roms", "wait": 20}
+    }
+  },
+  "nodes": {
+    "a": {"extends": "dos486"},
+    "b": {"extends": "dos486", "depends_on": ["a"],
+          "box_cfg": {"Machine": {"mem_size": "16384"}}}
+  }
+}

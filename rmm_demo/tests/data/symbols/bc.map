@@ -1,0 +1,24 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 0122FH 01230H _TEXT              CODE
+ 01230H 0150DH 002DEH _DATA              DATA
+
+Detailed map of segments
+
+ 0000:0000 0F3E C=CODE   S=_TEXT          G=(none)  M=C0.ASM     ACBP=28
+ 0123:0000 00DE C=DATA   S=_DATA          G=DGROUP  M=C0.ASM     ACBP=48
+
+  Address         Publics by Name
+
+ 0000:0291       _main
+ 0000:0250       _hurt
+ 0123:0094       _hero
+
+  Address         Publics by Value
+
+ 0000:0250       _hurt
+ 0000:0291       _main
+ 0123:0094       _hero
+
+Program entry point at 0000:0000

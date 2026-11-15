@@ -1,0 +1,72 @@
+{
+ "schema": "rmm-project/1",
+ "group_path": null,
+ "group": {
+  "schema": "rmm-group/1",
+  "name": "conwaybench",
+  "description": "One DOS 6.22 86Box (ms4144 486, 6 MB) launched by the console for the 'demo life' mem.phys race. vmroot and binary are filled in by prep_conwaybench.sh (R:/ ramdisk on the Win10 host, /tmp on Linux).",
+  "vars": {
+   "vmroot": "/tmp/rmm_groups/conwaybench",
+   "binary": "/opt/86box/86Box"
+  },
+  "policy": {
+   "halt_all": false
+  },
+  "defaults": {
+   "poll": {
+    "rate": 10
+   }
+  },
+  "nodes": {
+   "box1": {
+    "title": "DOS 6.22 (conwaybench)",
+    "port": 55910,
+    "launch": {
+     "vm_dir": "{vmroot}/box1",
+     "binary": "{binary}",
+     "roms": "/opt/86box/roms",
+     "wait": 20
+    },
+    "box_cfg": {
+     "Machine": {
+      "cpu_family": "i486dx",
+      "cpu_multi": "1",
+      "cpu_speed": "25000000",
+      "cpu_use_dynarec": "1",
+      "fpu_type": "internal",
+      "machine": "ms4144",
+      "mem_size": "6144"
+     },
+     "Video": {
+      "gfxcard": "cl_gd5420_isa"
+     },
+     "Input devices": {
+      "keyboard_type": "keyboard_at",
+      "mouse_type": "none",
+      "tablet_type": "none"
+     },
+     "Floppy and CD-ROM drives": {
+      "fdd_01_fn": "/testsrc/images/dos622_simple.img",
+      "fdd_01_turbo": "1",
+      "fdd_01_type": "35_2hd",
+      "fdd_02_turbo": "1",
+      "fdd_02_type": "35_2hd"
+     },
+     "General": {
+      "emu_build_dynarec_type": "old",
+      "host_cpu": "Intel(R) Xeon(R) Gold 6138 CPU @ 2.00GHz",
+      "vid_renderer": "qt_software"
+     },
+     "Ports (COM & LPT)": {
+      "serial1_device": "loopback",
+      "serial2_device": "loopback",
+      "serial2_enabled": "0"
+     }
+    }
+   }
+  }
+ },
+ "tree": null,
+ "files": {},
+ "lock": null
+}

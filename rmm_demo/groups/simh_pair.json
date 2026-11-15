@@ -1,0 +1,11 @@
+{
+  "schema": "rmm-group/1",
+  "name": "simh_pair",
+  "description": "Two dgnova (SIMH Nova) machines the GUI launches. They snap, restore, pause and resume with the group; no frame poller, the console text is the node's tty.",
+  "policy": {"halt_all": true},
+  "defaults": {"backend": "simh"},
+  "nodes": {
+    "a": {"simh": {"script_path": "/testsrc/sourcedir/86box_remote_monitor/rmm_demo/simh/loop.ini"}},
+    "b": {"simh": {"script_path": "/testsrc/sourcedir/86box_remote_monitor/rmm_demo/simh/loop.ini"}}
+  }
+}

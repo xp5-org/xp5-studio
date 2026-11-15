@@ -1,0 +1,13 @@
+{
+  "schema": "rmm-group/1",
+  "name": "qemu_trio",
+  "description": "Three headless QEMU machines started here, one per profile. q800 needs a Quadra ROM: set vars.q800_rom.",
+  "vars": {"vmroot": "/tmp/rmm_groups/{group}", "q800_rom": "/path/to/Quadra-650.ROM"},
+  "policy": {"halt_all": false},
+  "defaults": {"poll": {"rate": 5, "step": 1}},
+  "nodes": {
+    "pc": {"qemu": {"profile": "isapc", "run_dir": "{vmroot}/{node}", "wait": 10}},
+    "sun": {"qemu": {"profile": "ss5", "run_dir": "{vmroot}/{node}", "wait": 10}},
+    "mac": {"qemu": {"profile": "q800", "bios": "{q800_rom}", "run_dir": "{vmroot}/{node}", "wait": 10}}
+  }
+}

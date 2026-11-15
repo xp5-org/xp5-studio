@@ -1,0 +1,76 @@
+{
+  "schema": "rmm-project/1",
+  "group_path": null,
+  "group": {
+    "schema": "rmm-group/1",
+    "name": "lockstep7",
+    "description": "Seven machines, every one launched by this project (no testrunnerapp, no test_start*): two DOS 6.22 on 86Box (MEMLOOP), Windows 3.1 on QEMU i386, Solaris 9 on QEMU SS-5, Mac Q800 on QEMU m68k, a VICE C64 idling at the BASIC prompt, and a SIMH dgnova Nova. They snap, restore, pause and resume as one group. The disk images under {out} are made by prep_lockstep7.sh (file prep only; it starts no emulator).",
+    "vars": {
+      "vmroot": "/tmp/rmm_groups/lockstep7",
+      "out": "/testsrc/sourcedir/86box_remote_monitor/rmm_lockstep5_out",
+      "src": "/testsrc/sourcedir/86box_remote_monitor/rmm_demo"
+    },
+    "vm_config_dir": "/testsrc/sourcedir/86box_remote_monitor",
+    "policy": {"halt_all": false},
+    "defaults": {"poll": {"rate": 10}},
+    "templates": {
+      "dos486": {
+        "vm_config": "ms4144_486",
+        "port": "auto",
+        "launch": {"vm_dir": "{vmroot}/{node}", "roms": "/opt/86box/roms", "wait": 20}
+      },
+      "qemu": {"backend": "qemu", "host": "127.0.0.1", "rpc_timeout": 20}
+    },
+    "nodes": {
+      "a": {"extends": "dos486", "title": "DOS 6.22 a"},
+      "b": {"extends": "dos486", "title": "DOS 6.22 b", "box_cfg": {"Machine": {"mem_size": "16384"}}},
+      "w31": {
+        "extends": "qemu", "port": 56611, "title": "Windows 3.1 (QEMU i386)",
+        "qemu_argv": ["qemu-system-i386", "-m", "32M",
+          "-monitor", "tcp:127.0.0.1:55611,server,nowait", "-qmp", "tcp:127.0.0.1:56611,server,nowait",
+          "-vga", "cirrus", "-M", "pc", "-cpu", "486",
+          "-drive", "file={out}/w31/c.qcow2,if=ide,index=0,media=disk"]
+      },
+      "sol": {
+        "extends": "qemu", "port": 56612, "title": "Solaris 9 (QEMU SS-5)",
+        "qemu_argv": ["qemu-system-sparc", "-M", "SS-5", "-m", "256M",
+          "-monitor", "tcp:127.0.0.1:55612,server,nowait", "-qmp", "tcp:127.0.0.1:56612,server,nowait",
+          "-bios", "/testsrc/sourcedir/solaris9/ss5.bin",
+          "-prom-env", "auto-boot?=true", "-prom-env", "boot-device=disk0",
+          "-drive", "file={out}/sol/disk0.qcow2,if=scsi,bus=0,unit=0,media=disk",
+          "-drive", "file={out}/sol/disk-1.qcow2,if=scsi,bus=0,unit=1,media=disk",
+          "-drive", "file={out}/sol/disk-2.qcow2,if=scsi,bus=0,unit=2,media=disk",
+          "-drive", "file={out}/sol/disk-3.qcow2,if=scsi,bus=0,unit=3,media=disk",
+          "-drive", "file={out}/sol/disk-4.qcow2,if=scsi,bus=0,unit=4,media=disk",
+          "-drive", "file={out}/sol/disk-5.qcow2,if=scsi,bus=0,unit=5,media=disk"]
+      },
+      "m68k": {
+        "extends": "qemu", "port": 56613, "title": "Mac OS 7.6 (QEMU Q800)",
+        "qemu_cwd": "/testsrc/m68k",
+        "qemu_argv": ["qemu-system-m68k", "-L", "pc-bios", "-M", "q800", "-m", "64",
+          "-drive", "id=hd0,file=/testsrc/m68k/pramdisk.img,format=raw,if=none,snapshot=on",
+          "-device", "scsi-hd,scsi-id=0,drive=hd0",
+          "-drive", "id=hd1,file={out}/m68k/hdd.qcow2,format=qcow2,if=none",
+          "-device", "scsi-hd,scsi-id=1,drive=hd1",
+          "-bios", "/testsrc/m68k/Quadra-650.ROM", "-boot", "d",
+          "-monitor", "tcp:127.0.0.1:55613,server,nowait", "-qmp", "tcp:127.0.0.1:56613,server,nowait",
+          "-drive", "id=cd0,file=/testsrc/m68k/MacOS761.iso,media=cdrom,if=none",
+          "-device", "scsi-cd,scsi-id=3,drive=cd0",
+          "-audio", "none", "-serial", "file:{out}/m68k/serial.log",
+          "-drive", "id=hd2,file={out}/m68k/cube.qcow2,format=qcow2,if=none",
+          "-device", "scsi-hd,scsi-id=2,drive=hd2"]
+      },
+      "c64": {
+        "backend": "vice", "title": "Commodore 64 (VICE, BASIC prompt)",
+        "vice": {"args": ["-sounddev", "dummy"]}
+      },
+      "nova": {
+        "backend": "simh", "title": "Data General Nova (SIMH dgnova)",
+        "simh": {"script_path": "{src}/simh/loop.ini"}
+      }
+    }
+  },
+  "tree": null,
+  "files": {},
+  "lock": null
+}

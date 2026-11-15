@@ -1,0 +1,11 @@
+{
+  "schema": "rmm-group/1",
+  "name": "pair_attach",
+  "description": "Two VMs already running with [General] rmm_port = 55860 / 55861 (or --monitor-port). The GUI only attaches; it starts and stops nothing.",
+  "policy": {"halt_all": true},
+  "defaults": {"host": "127.0.0.1", "poll": {"rate": 10}},
+  "nodes": {
+    "a": {"port": 55860},
+    "b": {"port": 55861}
+  }
+}

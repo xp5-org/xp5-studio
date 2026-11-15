@@ -1,0 +1,56 @@
+Open Watcom Linker Version 2.0 beta Sep  1 2026 05:40:46 (64-bit)** EXPERIMENTAL (HLL) ** 
+Copyright (c) 2002-2026 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       26/11/14 01:51:59
+Executable Image: memloop.com
+creating a DOS .COM executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0000:0000            0000011e
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           DGROUP         0000:0000       0000011d
+_DATA                  DATA           DGROUP         0011:000e       00000000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: memloop.o(memloop.o)
+0000:0100*     start
+0000:010b*     publish
+0000:010f*     memloop
+0000:0113*     memloop_jmp
+0000:0115*     banner
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  011e (286.)
+Entry point address: 0000:0100
+Link time: 00:00.62
