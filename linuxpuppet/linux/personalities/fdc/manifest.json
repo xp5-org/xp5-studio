@@ -1,0 +1,6 @@
+{
+ "name": "fdc",
+ "description": "Floppy controller at the ports (3F0-3F7, IRQ6, DMA 2): reset and sense interrupt, version, invalid command, recalibrate, seek, READ ID geometry, READ DATA through the 8237 (terminal count, byte count, track vs single-sector consistency, both heads). Read-only: nothing is written to the disk.",
+ "files": [{"src": "bin/pp_fdc", "dst": "/pp/fdc/bin/pp_fdc", "mode": 493}],
+ "default_argv": ["/pp/fdc/bin/pp_fdc", "run"]
+}

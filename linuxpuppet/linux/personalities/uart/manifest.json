@@ -1,0 +1,6 @@
+{
+ "name": "uart",
+ "description": "16550/16450 UART checks (SERTEST page 1: data, formats, FIFO, overrun, break, THRE/TEMT, FCR, modem lines, IRQ via PIC IRR, type switch) built from the SERTEST.EXE repo core (src_dos/sertest_core.c); one result line per check.",
+ "files": [{"src": "bin/pp_uart", "dst": "/pp/uart/bin/pp_uart", "mode": 493}],
+ "default_argv": ["/pp/uart/bin/pp_uart", "detect"]
+}

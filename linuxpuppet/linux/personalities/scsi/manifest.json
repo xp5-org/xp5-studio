@@ -1,0 +1,6 @@
+{
+ "name": "scsi",
+ "description": "Adaptec AHA-154x ISA SCSI host adapter at its ports (0x334, IRQ 11, DMA 6) with the generated test disk as target 0: reset status, invalid command, adapter inquiry, configuration, echo, installed devices, mailbox init; then SCSI INQUIRY, TEST UNIT READY, READ CAPACITY, READ(6)/(10), 16-block and scatter/gather reads, residual length, MODE SENSE, IRQ latch, and errors (past the end, empty target, bad opcode, REQUEST SENSE). Read-only: nothing is written to the disk.",
+ "files": [{"src": "bin/pp_scsi", "dst": "/pp/scsi/bin/pp_scsi", "mode": 493}],
+ "default_argv": ["/pp/scsi/bin/pp_scsi", "run"]
+}

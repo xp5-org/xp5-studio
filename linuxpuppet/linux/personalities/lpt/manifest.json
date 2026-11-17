@@ -1,0 +1,6 @@
+{
+ "name": "lpt",
+ "description": "Parallel port checks (LPTTEST: data/control readback, latch, status, strobe handshake, IRQ, /INIT) built from the SERTEST.EXE repo core (src_dos/lpttest_core.c); one result line per check.",
+ "files": [{"src": "bin/pp_lpt", "dst": "/pp/lpt/bin/pp_lpt", "mode": 493}],
+ "default_argv": ["/pp/lpt/bin/pp_lpt", "run"]
+}

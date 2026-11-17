@@ -1,0 +1,6 @@
+{
+ "name": "selftest",
+ "description": "Loader self test: argv/env echo, exit codes, a spinner for KILL, file CRC, RTC via port I/O.",
+ "files": [{"src": "bin/pp_selftest", "dst": "/pp/selftest/bin/pp_selftest", "mode": 493}],
+ "default_argv": ["/pp/selftest/bin/pp_selftest", "echo"]
+}

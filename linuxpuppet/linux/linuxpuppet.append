@@ -1,0 +1,1 @@
+console=tty0 memmap=64K$0x80000 memmap=32K$0x90000 quiet loglevel=3

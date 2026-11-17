@@ -1,0 +1,6 @@
+{
+ "name": "snd",
+ "description": "Sound Blaster 16 checks driven at the ports: DSP reset/version, mixer, speaker, 8/16-bit DAC and ADC rate against the PIT, block-end IRQ via the PIC request register; plus a 'tone' command that plays a seamless sine for a host-side recorder.",
+ "files": [{"src": "bin/pp_snd", "dst": "/pp/snd/bin/pp_snd", "mode": 493}],
+ "default_argv": ["/pp/snd/bin/pp_snd", "run"]
+}

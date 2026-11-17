@@ -1,0 +1,6 @@
+{
+ "name": "ide",
+ "description": "Primary ATA channel at the ports (1F0-1F7, 3F6, IRQ14), PIO: reset signature, IDENTIFY, diagnostic, absent slave, invalid command, IRQ14 latch, LBA and CHS reads, multi-sector and READ MULTIPLE, 256-sector count, verify, seek, set features, past-the-end errors. Read-only: nothing is written to the disk (the cell's disk is write-protected).",
+ "files": [{"src": "bin/pp_ide", "dst": "/pp/ide/bin/pp_ide", "mode": 493}],
+ "default_argv": ["/pp/ide/bin/pp_ide", "run"]
+}

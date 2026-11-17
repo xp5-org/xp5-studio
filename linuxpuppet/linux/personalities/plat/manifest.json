@@ -1,0 +1,6 @@
+{
+ "name": "plat",
+ "description": "Chipset checks at the ports: 8254 PIT channel 2 (access modes, modes 0/2/3, BCD, read-back), MC146818 RTC/CMOS (format, tick, rate vs PIT, periodic flag, alarm, RAM), 8259 PICs (IMR, IRR with interrupts off, ELCR) and 8237 DMA (address/count/page registers, software-requested verify transfer).",
+ "files": [{"src": "bin/pp_plat", "dst": "/pp/plat/bin/pp_plat", "mode": 493}],
+ "default_argv": ["/pp/plat/bin/pp_plat", "run"]
+}

@@ -1,0 +1,6 @@
+{
+ "name": "vga",
+ "description": "Video primitives (puppet_plan.md P3): INT10 through vm86 into the card's own BIOS, VBE mode list, deterministic block pattern per mode, VRAM CRC, vblank rate, register dump/replay (REGSEQ).",
+ "files": [{"src": "bin/pp_vga", "dst": "/pp/vga/bin/pp_vga", "mode": 493}],
+ "default_argv": ["/pp/vga/bin/pp_vga", "info"]
+}

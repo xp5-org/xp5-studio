@@ -1,0 +1,6 @@
+{
+ "name": "kbc",
+ "description": "8042 keyboard controller and A20 gate at the ports: self test, interface tests, command byte, D2 loopback, output port, port 92, keyboard echo and id.",
+ "files": [{"src": "bin/pp_kbc", "dst": "/pp/kbc/bin/pp_kbc", "mode": 493}],
+ "default_argv": ["/pp/kbc/bin/pp_kbc", "run"]
+}
